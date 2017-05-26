@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Alex Rasp - Index{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        Raspberry Pi Status
+    </h1>
+    <ul>
+        <li>CPU Temp: {{ stats["CPU_temp"] }} 'C</li>
+        <li>CPU Usage: {{ stats["CPU_usage"] }} %</li>
+        <li>RAM Total: {{ stats["RAM_total"] }} MB</li>
+        <li>RAM Used: {{ stats["RAM_used"] }} MB</li>
+        <li>RAM Free: {{ stats["RAM_free"] }} MB</li>
+        <li>DISK Total: {{ stats["DISK_total"] }} MB</li>
+        <li>DISK Used: {{ stats["DISK_used"] }} MB</li>
+        <li>DISK Perc: {{ stats["DISK_perc"] }} %</li>
+    </ul>
+</div>
+{% endblock %}
